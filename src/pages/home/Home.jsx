@@ -1,3 +1,4 @@
+import Card from "../../components/Card";
 import Container from "../../components/Container";
 import AdsSection from "./adssection/AdsSection";
 import SpecialAds from "./adssection/SpecialAds";
@@ -12,6 +13,9 @@ const Home = () => {
             <Container>
                 <AdsSection/>
 
+                <div className="py-10">
+                    <Card/>
+                </div>
                 <SpecialAds/>
             </Container>
             
