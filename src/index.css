@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ul li .active{
+    color: black;
+    font-weight: 800;
+}
