@@ -9,6 +9,7 @@ export default {
       colors:{
         lightGray: '#767676',
         Prime: '#F5F5F3',
+        black: '#262626'
       }
     },
   },
