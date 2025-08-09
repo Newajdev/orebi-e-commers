@@ -14,11 +14,11 @@ const Footer = () => {
                     <div className="w-[10%]">
                         <p className="text-base font-bold">MENU</p>
                         <ul className="flex flex-col gap-y-2 mt-4">
-                            <NavList title={'Home'}></NavList>
-                            <NavList title={'Shop'}></NavList>
-                            <NavList title={'About'}></NavList>
-                            <NavList title={'Contact'}></NavList>
-                            <NavList title={'Journal'}></NavList>
+                            <NavList pathName={'/'} title={'Home'}></NavList>
+                            <NavList pathName={'/shop'} title={'Shop'}></NavList>
+                            <NavList pathName={'/about'} title={'About'}></NavList>
+                            <NavList pathName={'/contact'} title={'Contact'}></NavList>
+                            <NavList pathName={'/journal'} title={'Journal'}></NavList>
                         </ul>
                     </div>
                     <div className="w-[10%]">

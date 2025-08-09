@@ -15,7 +15,7 @@ const Navbar = () => {
                     <div className='w-4/12'>
                         <Flex>
                             <Image style={'w-[24px]'} Source={logo}></Image>
-                            <h3 className='text-xl font-bold'>REBI</h3>
+                            <h3 className='text-2xl font-bold mt-0.1'>REBI</h3>
                         </Flex>
                     </div>
                     <div className='w-6/12 '>
@@ -23,7 +23,7 @@ const Navbar = () => {
                             <NavList pathName={'/'} title={'home'}></NavList>
                             <NavList pathName={'/shop'} title={'Shop'}></NavList>
                             <NavList pathName={'/about'} title={'About'}></NavList>
-                            <NavList pathName={'/contacts'} title={'Contacts'}></NavList>
+                            <NavList pathName={'/contact'} title={'Contacts'}></NavList>
                             <NavList pathName={'/journal'} title={'Journal'}></NavList>
                         </ul>
                     </div>

@@ -37,7 +37,7 @@ const Searchbar = () => {
     }, [])
 
     return (
-        <div className="bg-Prime py-7">
+        <div className="bg-Prime py-7 border-y-2">
             <Container>
                 <Flex>
                     <div className="w-3/12 relative">
@@ -63,7 +63,7 @@ const Searchbar = () => {
                         }
                     </div>
                     <div className="w-5/12 border relative">
-                        <input name="search" type="text" className="w-full py-4 pl-6 border-0" placeholder="Search Products" />
+                        <input name="search" type="text" className="w-full py-4 pl-6 pr-14 border-0" placeholder="Search Products" />
                         <FaSearch className="absolute top-1/2 right-6 -translate-y-1/2" />
                     </div>
                     <div className="w-4/12 flex justify-end gap-6 text-2xl">

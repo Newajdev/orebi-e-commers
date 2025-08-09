@@ -1,9 +1,20 @@
+import Container from "../../components/Container";
+import AdsSection from "./adssection/AdsSection";
+import SpecialAds from "./adssection/SpecialAds";
+import Banner from "./banner/Banner";
 
 
 const Home = () => {
     return (
-        <div className="text-center font-bold text-5xl">
-            This is home
+        <div>
+            <Banner/>
+
+            <Container>
+                <AdsSection/>
+
+                <SpecialAds/>
+            </Container>
+            
         </div>
     );
 };
