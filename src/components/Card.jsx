@@ -4,10 +4,16 @@ import Image from './Image';
 import Product from "../assets/SampleProduct.png"
 import { FaHeart } from 'react-icons/fa';
 import { FaCartShopping, FaRotate } from 'react-icons/fa6';
+import { useNavigate } from 'react-router-dom';
 
 const Card = () => {
+    const Navigate = useNavigate()
+    const hendleProductsDetails = () =>{
+        Navigate('/shop/productsdetails')
+        
+    }
     return (
-        <div className='w-[370px] h-[465px] relative  group'>
+        <div onClick={hendleProductsDetails} className='w-[370px] h-[465px] relative  group'>
 
             <div className='absolute mt-6 ml-6 z-50'>
                 <h3 className='text-white text-sm font-bold px-4 py-2 bg-black inline-flex rounded-sm'>New</h3>

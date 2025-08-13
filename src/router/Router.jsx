@@ -18,6 +18,10 @@ const Router = createBrowserRouter([
             element: <Container><h2 className="text-center text-2xl py-6 font-bold uppercase">Shop Page</h2></Container>
         },
         {
+            path:"/shop/productsdetails",
+            element: <Container><h2 className="text-center text-2xl py-6 font-bold uppercase">Products Details</h2></Container>
+        },
+        {
             path:"/about",
             element: <Container><h2 className="text-center text-2xl py-6 font-bold uppercase">about Page</h2></Container>
         },
