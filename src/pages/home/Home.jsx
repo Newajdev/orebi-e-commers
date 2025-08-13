@@ -3,6 +3,9 @@ import Container from "../../components/Container";
 import AdsSection from "./adssection/AdsSection";
 import SpecialAds from "./adssection/SpecialAds";
 import Banner from "./banner/Banner";
+import NewArrival from "./newarrival/NewArrival";
+import BestSeller from "./ourbestsellers/BestSeller";
+import SpecialOffers from "./specialoffer/SpecialOffers";
 
 
 const Home = () => {
@@ -14,9 +17,13 @@ const Home = () => {
                 <AdsSection/>
 
                 <div className="py-10">
-                    <Card/>
+                    <NewArrival/>
+                    <BestSeller/>
                 </div>
                 <SpecialAds/>
+                <div className="py-10">
+                    <SpecialOffers/>
+                </div>
             </Container>
             
         </div>
