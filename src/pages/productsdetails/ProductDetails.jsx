@@ -13,6 +13,9 @@ const ProductDetails = () => {
     const [Quantity, setQuantity] = useState(0)
     const [open, setOpen] = useState(null)
     const [Active, setActive] = useState('Description')
+    const [communicationrating, setRatingCommunication] = useState(0);
+    const [productsrating, setRatingProducts] = useState(0);
+    const [servicesrating, setRatingServices] = useState(0);
 
 
     const hendleColors = () => {
@@ -125,21 +128,80 @@ const ProductDetails = () => {
                     </div>
 
                     {/* Descrioption and Reviews tab */}
-                    {/* Description Section */}
-                    <div className={`h-5 w-5 mt-10 ${Active === 'Description' ? '' : 'hidden'}`}>
-                        <p>This is Description Section</p>
-                    </div>
-                    {/* Review Section */}
+                    
+                    
                     <div className='flex gap-6 mt-20'>
                         <p onClick={() => setActive('Description')} className={`text-xl text-lightGray ${Active === 'Description' ? 'font-bold text-[#000000]' : ''}`}>Description</p>
                         <p onClick={() => setActive('Reviews')} className={`text-xl text-lightGray ${Active === 'Reviews' ? 'font-bold text-[#000000]' : ''}`}>Reviews (1)</p>
                     </div>
-
+                    {/* Description Section */}
+                    <div className={`mt-10 ${Active === 'Description' ? '' : 'hidden'}`}>
+                        <p>This is Description Section</p>
+                    </div>
+                    {/* Review Section */}
                     <div className={`mt-10 ${Active === 'Reviews' ? '' : 'hidden'}`}>
                         <p className='text-lightGray'>1 review for this product</p>
-                        <ReviewCard/>
+                        <ReviewCard />
                     </div>
-                    
+
+                    {/* Add A Review */}
+                    <div className='w-1/2 my-32'>
+                        <h4 className='text-xl font-bold'>Add a Review</h4>
+                        <form className='mt-12 mb-7'>
+                            <label className='text-base font-bold block mt-6'>Name</label>
+                            <input type="text" name='name' className='border-b w-full mt-3 py-2 ' placeholder='Your name' />
+
+                            <label className='text-base font-bold block mt-6'>Email</label>
+                            <input type="email" name='email' className='border-b w-full mt-3 py-2 ' placeholder='Your E-mail Address' />
+
+                            <label className='text-base font-bold block mt-6'>Message</label>
+                            <textarea rows={4} type="text" name='message' className='border-b w-full mt-3 py-2 ' placeholder='Give us your Feedback of this Products' />
+
+                            <div className='my-3'>
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-center gap-6'>
+                                        <Rating
+                                            style={{ maxWidth: 130 }}
+                                            value={communicationrating}
+                                            onChange={setRatingCommunication}
+                                            isRequired
+                                        />
+                                        <p className='text-base mt-1'>{communicationrating} Star</p>
+                                    </div>
+                                    <p>For Communication</p>
+                                </div>
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-center gap-6'>
+                                        <Rating
+                                            style={{ maxWidth: 130 }}
+                                            value={productsrating}
+                                            onChange={setRatingProducts}
+                                            isRequired
+                                        />
+                                        <p className='text-base mt-1'>{productsrating} Star</p>
+                                    </div>
+                                    <p>For Products</p>
+                                </div>
+                                <div className='flex items-center justify-between'>
+                                    <div className='flex items-center gap-6'>
+                                        <Rating
+                                            style={{ maxWidth: 130 }}
+                                            value={servicesrating}
+                                            onChange={setRatingServices}
+                                            isRequired
+                                        />
+                                        <p className='text-base mt-1'>{servicesrating} Star</p>
+                                    </div>
+                                    <p>For Services</p>
+                                </div>
+                            </div>
+
+
+                            <PrimeBtn style={'px-20 mt-10'} title={'Post'}><input type="submit" /></PrimeBtn>
+                        </form>
+
+                    </div>
+
 
 
 
