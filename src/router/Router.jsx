@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../pages/home/Home";
 import Container from "../components/Container";
+import ProductDetails from "../pages/productsdetails/ProductDetails";
 
 
 const Router = createBrowserRouter([
@@ -19,7 +20,7 @@ const Router = createBrowserRouter([
         },
         {
             path:"/shop/productsdetails",
-            element: <Container><h2 className="text-center text-2xl py-6 font-bold uppercase">Products Details</h2></Container>
+            element: <ProductDetails></ProductDetails>
         },
         {
             path:"/about",
